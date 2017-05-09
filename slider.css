@@ -52,14 +52,14 @@
 .slider__switch span {
   color: #fff;
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
 }
 /* Arrows */
 .slider__switch {
   position: absolute;
   top: 50%;
-  margin-top: -28px;
+  margin-top: -32px;
   padding: 10px 5px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -67,7 +67,7 @@
       -ms-user-select: none;
        -o-user-select: none;
           user-select: none;
-  opacity: .5;
+  opacity: 1;
   transition: opacity .15s ease;
   fill: #fff;
 }
@@ -79,7 +79,7 @@
 }
 
 .slider__switch:hover {
-  opacity: 1;
+  opacity: 0.5;
 }
 .slider__switch[disabled] {
   visibility: hidden;

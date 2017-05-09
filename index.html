@@ -1,375 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bec and Scott tie the knot.">
-
-  <title>Bec and Scott tie the knot</title>
-  <link rel="stylesheet" href="bulma.css">
-  <link rel="stylesheet" href="slider.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="jquery.plugin.min.js"></script>
-  <script src="jquery.countdown.min.js"></script>
-  <script src="jquery.slider.min.js"></script>
-  <script src="particles.min.js"></script>
-  <!-- TODO icon -->
-  <!-- TODO compress fontawesome to just SVGs required -->
-  <!-- TODO remove jquery slider -->
-  <!-- TODO is countdown required? -->
-  <style>
-  .bounce {
-	  -webkit-animation-name: bounce;
-	  -moz-animation-name: bounce;
-	  -o-animation-name: bounce;
-	  animation-name: bounce;
-  }
-  .animated {-webkit-animation-fill-mode:both;
-	  -moz-animation-fill-mode:both;
-	  -ms-animation-fill-mode:both;
-	  -o-animation-fill-mode:both
-	  animation-iteration-count: infinite;
-	  -moz-animation-iteration-count: infinite;
-	  -webkit-animation-iteration-count: infinite;
-	  animation-fill-mode:both;
-	  -webkit-animation-duration:2s;
-	  -moz-animation-duration:2s;
-	  -ms-animation-duration:2s;
-	  -o-animation-duration:2s;
-	  animation-duration:2s;
-  }
-  .heartbeat {
-	  -webkit-animation: heart-beats 3s infinite;
-	  animation: heart-beats 3s infinite;
-  }
-  .heartbeathover:hover {
-	  -webkit-animation: heart-beats 3s 1;
-	  animation: heart-beats 3s 1;
-  }
-  @-webkit-keyframes bounce {
-	  0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
-	  60% {-webkit-transform: translateY(-15px);}
-  }
-  @-moz-keyframes bounce {
-	  0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
-	  40% {-moz-transform: translateY(-30px);}
-	  60% {-moz-transform: translateY(-15px);}
-  }
-  @-o-keyframes bounce {
-	  0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
-	  40% {-o-transform: translateY(-30px);}
-	  60% {-o-transform: translateY(-15px);}
-  }
-  @keyframes bounce {
-	  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	  40% {transform: translateY(-30px);}
-	  60% {transform: translateY(-15px);}
-  }
-  @keyframes heart-beats {
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bec and Scott tie the knot.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<title>Bec and Scott tie the knot</title>
+<link rel="stylesheet" href="bulma.css">
+<link rel="stylesheet" href="slider.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#b91d47">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="jquery.plugin.min.js"></script>
+<script src="jquery.countdown.min.js"></script>
+<script src="jquery.slider.min.js"></script>
+<script src="particles.min.js"></script>
+<style>
+section {
+	z-index: 2;
+}
+.icon svg {
+	fill: currentColor;
+	height: 21px;
+	max-width: 21px;
+}
+.icon.is-small svg {
+	height: 14px;
+	max-width: 14px;
+}
+.icon.is-medium svg {
+	height: 28px;
+	max-width: 28px;
+}
+.icon.is-large svg {
+	height: 42px;
+	max-width: 42px;
+}
+.icon.is-huge {
+	height: 4rem;
+	width: 4rem;
+}
+.icon.is-huge .fa {
+	font-size: 56px;
+}
+.icon.is-huge svg {
+	height: 56px;
+	max-width: 56px;
+}
+.icon.is-epic {
+	height: 6rem;
+	width: 6rem;
+}
+.icon.is-epic .fa {
+	font-size: 74px;
+}
+.icon.is-epic svg {
+	height: 74px;
+	max-width: 74px;
+}
+.bounce {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-o-animation-name: bounce;
+	animation-name: bounce;
+}
+.animated {
+	-webkit-animation-fill-mode:both;
+	-moz-animation-fill-mode:both;
+	-ms-animation-fill-mode:both;
+	-o-animation-fill-mode:both
+	animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-fill-mode:both;
+	-webkit-animation-duration:2s;
+	-moz-animation-duration:2s;
+	-ms-animation-duration:2s;
+	-o-animation-duration:2s;
+	animation-duration:2s;
+}
+.heartbeat {
+	-webkit-animation: heart-beats 3s infinite;
+	animation: heart-beats 3s infinite;
+}
+.heartbeathover:hover {
+	-webkit-animation: heart-beats 3s 1;
+	animation: heart-beats 3s 1;
+}
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+@keyframes heart-beats {
 	0%   { transform: scale(1);}
-	7%  { transform: scale(1.2); }
+	7%   { transform: scale(1.2); }
 	12%  { transform: scale(1.1); }
 	20%  { transform: scale(1.3); }
 	60%  { transform: scale(1); }
 	100% { transform: scale(0.99); }
-  }
-  @-webkit-keyframes heart-beats {
-	0%  { -webkit-transform: scale(1); }
-	7%  { -webkit-transform: scale(1.2); }
-	12% { -webkit-transform: scale(1.1); }
-	20% { -webkit-transform: scale(1.3); }
-	60% { -webkit-transform: scale(1); }
+}
+@-webkit-keyframes heart-beats {
+	0%   { -webkit-transform: scale(1); }
+	7%   { -webkit-transform: scale(1.2); }
+	12%  { -webkit-transform: scale(1.1); }
+	20%  { -webkit-transform: scale(1.3); }
+	60%  { -webkit-transform: scale(1); }
 	100% { -webkit-transform: scale(0.99); }
-  }
-  </style>
-  <script>
-  $(document).ready(function() {
-	  $(".countdown").countdown({until: new Date("Jan 1 2020 16:00:00 +1100"), compact: true}).show().after("<br>");
+}
+</style>
+<script>
+$(document).ready(function() {
+	$(".countdown").countdown({until: new Date("Jan 1 2020 16:00:00 +1100"), compact: true}).show().after("<br>");
 
-	  $("#location").click(function() {
-		  $("#location iframe").css("pointer-events", "auto");
-	  });
+	$("#location").click(function() {
+		$("#location iframe").css("pointer-events", "auto");
+	});
 
-	  $("#location").mouseleave(function() {
+	$("#location").mouseleave(function() {
 		$("#location iframe").css("pointer-events", "none");
-	  });
+	});
 
-	  $(".nav-toggle").click(function() {
+	$(".nav-toggle").click(function() {
 		$(".nav-toggle,.nav-menu").toggleClass("is-active");
-	  });
+	});
 
-	  $("a[href*=\\#]").on("click", function(event){
+	$("a[href*=\\#]").on("click", function(event){
 		event.preventDefault();
 		$("html,body").animate({scrollTop:$(this.hash).offset().top}, 500);
-	  });
+	});
 
-	  $(".slider-container").ikSlider({
+	$(".slider-container").ikSlider({
 		speed: 500,
 		caption : false,
 		autoPlay: true
-	  });
+	});
 
-	  particlesJS("particles", {
+	particlesJS("particles", {
 		"particles": {
-		"number": {
-		  "value": 160,
-		  "density": {
-			"enable": true,
-			"value_area": 800
-		  }
+			"number": {
+				"value": 160,
+				"density": {
+					"enable": true,
+					"value_area": 800
+				}
+			},
+			"color": {
+				"value": "#ffffff"
+			},
+			"shape": {
+				"type": "circle",
+				"stroke": {
+					"width": 0,
+					"color": "#000000"
+				},
+				"polygon": {
+					"nb_sides": 5
+				}
+			},
+			"opacity": {
+				"value": 1,
+				"random": true,
+				"anim": {
+					"enable": true,
+					"speed": 1,
+					"opacity_min": 0,
+					"sync": false
+				}
+			},
+			"size": {
+				"value": 4,
+				"random": true,
+				"anim": {
+					"enable": false,
+					"speed": 4,
+					"size_min": 0.3,
+					"sync": false
+				}
+			},
+			"line_linked": {
+				"enable": false,
+				"distance": 150,
+				"color": "#ffffff",
+				"opacity": 0.4,
+				"width": 1
+			},
+			"move": {
+				"enable": true,
+				"speed": 1,
+				"direction": "none",
+				"random": true,
+				"straight": false,
+				"out_mode": "out",
+				"bounce": false,
+				"attract": {
+					"enable": false,
+					"rotateX": 600,
+					"rotateY": 600
+				}
+			}
 		},
-		"color": {
-		  "value": "#ffffff"
-		},
-		"shape": {
-		  "type": "circle",
-		  "stroke": {
-			"width": 0,
-			"color": "#000000"
-		  },
-		  "polygon": {
-			"nb_sides": 5
-		  }
-		},
-		"opacity": {
-		  "value": 1,
-		  "random": true,
-		  "anim": {
-			"enable": true,
-			"speed": 1,
-			"opacity_min": 0,
-			"sync": false
-		  }
-		},
-		"size": {
-		  "value": 4,
-		  "random": true,
-		  "anim": {
-			"enable": false,
-			"speed": 4,
-			"size_min": 0.3,
-			"sync": false
-		  }
-		},
-		"line_linked": {
-		  "enable": false,
-		  "distance": 150,
-		  "color": "#ffffff",
-		  "opacity": 0.4,
-		  "width": 1
-		},
-		"move": {
-		  "enable": true,
-		  "speed": 1,
-		  "direction": "none",
-		  "random": true,
-		  "straight": false,
-		  "out_mode": "out",
-		  "bounce": false,
-		  "attract": {
-			"enable": false,
-			"rotateX": 600,
-			"rotateY": 600
-		  }
-		}},
-	    "retina_detect": true
-	  });
-  });
-  </script>
+		"retina_detect": true
+	});
+});
+</script>
 </head>
-<body style="background: url(images/becnscott.jpg) no-repeat top center; background-size: cover; background-attachment: fixed;">
-	<section class="hero is-fullheight is-dark" style="background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 98%); background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 98%); background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 98%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );">
-
-	  <!-- Hero header: will stick at the top -->
-	  <div class="hero-head">
-	    <header class="nav" style="box-shadow: none;">
-	      <div class="container">
-	        <div class="nav-left" style="overflow: hidden;">
-	          <a class="nav-item">
-				<span style="font-family: 'Satisfy', cursive; font-size: 2.4rem; color: #fff; margin-top: 10px;">b&amp;s</span>
-	          </a>
-	        </div>
-	        <span class="nav-toggle">
-	          <span></span>
-	          <span></span>
-	          <span></span>
-	        </span>
-	        <div class="nav-right nav-menu">
-	          <a href="#details" class="nav-item">
-	            Details
-	          </a>
-	          <a href="#location" class="nav-item">
-	            Location
-	          </a>
-	          <a href="#celebrate" class="nav-item">
-	            Celebrate
-	          </a>
-			  <a href="#gallery" class="nav-item">
-	            Gallery
-	          </a>
-			  <a href="#accomodation" class="nav-item">
-	            Accomodation
-	          </a>
-			  <a href="#rsvp" class="nav-item">
-	            RSVP
-	          </a>
-	        </div>
-	      </div>
-	    </header>
-	  </div>
-
-	  <!-- Hero content: will be in the middle -->
-	  <div class="hero-body">
-	    <div class="container has-text-centered">
-	      <h1 class="title is-1" style="font-family: 'Satisfy', cursive; font-size: 5rem;">
-	        bec &amp; scott
-	      </h1>
-	      <h2 class="subtitle is-3" style="font-family: 'Satisfy', cursive; font-size: 3.33rem;">
-	        tie the knot
-	      </h2>
-	    </div>
-	  </div>
-
-	  <!-- Hero footer: will stick at the bottom -->
-	  <div class="hero-foot has-text-centered">
-		<a href="#details" class="icon is-large animated bounce" style="margin-bottom: 1rem;">
-          <i class="fa fa-angle-down" style="font-size: 4rem;"></i>
-	  </a>
-	  </div>
-	</section>
-
+<body>
+	<div style="position: relative; background: url(images/becnscott.jpg) no-repeat top center; background-size: cover; background-attachment: fixed; z-index: 2;">
+		<section class="hero is-dark is-fullheight" style="background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 98%); background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 98%); background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 98%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );">
+			<!-- Hero header: will stick at the top -->
+			<div class="hero-head">
+				<header class="nav" style="box-shadow: none;">
+					<div class="container">
+						<div class="nav-left" style="overflow: hidden;">
+							<a class="nav-item">
+							<span style="font-family: 'Satisfy', cursive; font-size: 2.4rem; color: #fff; margin-top: 10px;">b&amp;s</span>
+							</a>
+						</div>
+						<span class="nav-toggle">
+						<span></span>
+						<span></span>
+						<span></span>
+						</span>
+						<div class="nav-right nav-menu">
+							<a href="#details" class="nav-item">
+							Details
+							</a>
+							<a href="#location" class="nav-item">
+							Location
+							</a>
+							<a href="#celebrate" class="nav-item">
+							Celebrate
+							</a>
+							<a href="#gallery" class="nav-item">
+							Gallery
+							</a>
+							<a href="#accomodation" class="nav-item">
+							Accomodation
+							</a>
+							<a href="#rsvp" class="nav-item">
+							RSVP
+							</a>
+						</div>
+					</div>
+				</header>
+			</div>
+			<!-- Hero content: will be in the middle -->
+			<div class="hero-body">
+				<div class="container has-text-centered">
+					<h1 class="title is-1" style="font-family: 'Satisfy', cursive; font-size: 5rem;">
+						bec &amp; scott
+					</h1>
+					<h2 class="subtitle is-3" style="font-family: 'Satisfy', cursive; font-size: 3.33rem;">
+						tie the knot
+					</h2>
+				</div>
+			</div>
+			<!-- Hero footer: will stick at the bottom -->
+			<div class="hero-foot has-text-centered">
+				<a href="#details" class="icon is-epic animated bounce" style="margin-bottom: 1rem;">
+					<svg class="fa icon-angle-down"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-angle-down"></use></svg>
+				</a>
+			</div>
+		</section>
+	</div>
 	<section class="hero is-primary is-bold is-fullheight" id="details" style="position: relative;">
-	  <div id="particles" style="position: absolute; width: 100%; height: 100%; z-index: 0; max-height: 100vh;"></div>
-	  <div class="hero-body">
-	    <div class="container has-text-centered">
-	      <h1 class="title is-1" style="font-family: 'Satisfy', cursive; font-size: 5rem;">
-	        Our big day
-	      </h1>
-		  <div class="columns">
-		    <div class="column is-4 is-offset-2">
-			  <br>
-			  <span class="icon is-large">
-				<i class="fa fa-clock-o" style="font-size: 4rem;"></i>
-			  </span>
-			  <br><br>
-			  <h2 class="subtitle is-3" style="font-family: 'Satisfy', cursive; font-size: 3.33rem;">
-	  	        when
-	  	      </h2>
-			  <p class="subtitle is-5"><span class="countdown" style="display: none;"></span>1st Jan 2020<br>Ceremony begins 4pm</p>
-		    </div>
-		    <div class="column is-4">
-			  <br>
-			  <span class="icon is-large">
-  				<i class="fa fa-map-marker" style="font-size: 4rem;"></i>
-  			  </span>
-			  <br><br>
-  			  <h2 class="subtitle is-3" style="font-family: 'Satisfy', cursive; font-size: 3.33rem;">
-  	  	        where
-  	  	      </h2>
-			  <p class="subtitle is-5">Lindenderry Estate<br>142 Arthurs Seat Road<br>Red Hill 3937, Australia</p>
-		    </div>
-		  </div>
-	    </div>
-	  </div>
+		<div id="particles" style="position: absolute; width: 100%; height: 100%; z-index: 0; max-height: 100vh;"></div>
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<h1 class="title is-1" style="font-family: 'Satisfy', cursive; font-size: 5rem;">
+					Our big day
+				</h1>
+				<div class="columns">
+					<div class="column is-4 is-offset-2">
+						<br>
+						<span class="icon is-huge">
+							<svg class="fa icon-clock-o"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clock-o"></use></svg>
+						</span>
+						<br><br>
+						<h2 class="subtitle is-3" style="font-family: 'Satisfy', cursive; font-size: 3.33rem;">
+							when
+						</h2>
+						<p class="subtitle is-5"><span class="countdown" style="display: none;"></span>1st Jan 2020<br>Ceremony begins 4pm</p>
+					</div>
+					<div class="column is-4">
+						<br>
+						<span class="icon is-huge">
+							<svg class="fa icon-map-marker"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-map-marker"></use></svg>
+						</span>
+						<br><br>
+						<h2 class="subtitle is-3" style="font-family: 'Satisfy', cursive; font-size: 3.33rem;">
+							where
+						</h2>
+						<p class="subtitle is-5">Lindenderry Estate<br>142 Arthurs Seat Road<br>Red Hill 3937, Australia</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
-
-	<section class="hero is-fullheight" id="location" style="position: relative;">
-	  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12512.494910984142!2d145.0172993!3d-38.3692591!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x24ded6fab6f89ecc!2sLindenderry+at+Red+Hill!5e0!3m2!1sen!2sau!4v1493125032486" frameborder="0" width="100%" height="100%" style="border:0; pointer-events: none; height: 100%; position: absolute; top:0; bottom:0;left:0;right:0;" allowfullscreen></iframe>
+	<section class="hero is-black is-bold is-fullheight" id="location" style="position: relative;">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12512.494910984142!2d145.0172993!3d-38.3692591!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x24ded6fab6f89ecc!2sLindenderry+at+Red+Hill!5e0!3m2!1sen!2sau!4v1493125032486" frameborder="0" width="100%" height="100%" style="border:0; pointer-events: none; height: 100%; position: absolute; top:0; bottom:0;left:0;right:0;" allowfullscreen></iframe>
 	</section>
-
-	<section class="hero is-danger is-bold is-fullheight" id="celebrate">
-	  <div class="hero-body">
-	    <div class="container has-text-centered">
-	      <h1 class="title is-1" style="font-family: 'Satisfy', cursive; font-size: 5rem;">
-	        Celebrate with us
-	      </h1>
-
-		  <div class="columns">
-		    <div class="column is-4 is-offset-2">
-			  <br>
-			  <span class="icon is-large">
-				<i class="fa fa-moon-o" style="font-size: 4rem;"></i>
-			  </span>
-			  <br><br>
-			  <h2 class="subtitle is-3" style="font-family: 'Satisfy', cursive; font-size: 3.33rem;">
-	  	        night before
-	  	      </h2>
-			  <p class="subtitle is-5"><a href="http://www.theepicurean.com.au/" target="_blank"><u>The Epicurean</u></a> is a beautiful old packers shed that serves fresh Italian food using locally grown produce. We shall be making a reservation for dinner on the Friday night for 7pm. If you'd like to join us, please let us know <a href="mailto:hello@becandscotttietheknot.com?subject=Wedding RSVP"><u>when you RSVP</u></a>.</p>
-		    </div>
-		    <div class="column is-4">
-			  <br>
-			  <span class="icon heartbeat is-large">
-  				<i class="fa fa-heart-o" style="font-size: 4rem;"></i>
-  			  </span>
-			  <br><br>
-  			  <h2 class="subtitle is-3" style="font-family: 'Satisfy', cursive; font-size: 3.33rem;">
-  	  	        morning after
-  	  	      </h2>
-			  <p class="subtitle is-5">Lindenderry shall be serving breakfast for all guests the morning after at 9am, but all are welcome to attend, whether you are hotel guests or not.</p>
-		    </div>
-		  </div>
-	    </div>
-	  </div>
+	<section class="hero is-danger is-bold is-fullheight" id="celebrate" style="position: relative;">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<h1 class="title is-1" style="font-family: 'Satisfy', cursive; font-size: 5rem;">
+					Celebrate with us
+				</h1>
+				<div class="columns">
+					<div class="column is-4 is-offset-2">
+						<br>
+						<span class="icon is-huge">
+							<svg class="fa icon-moon-o"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-moon-o"></use></svg>
+						</span>
+						<br><br>
+						<h2 class="subtitle is-3" style="font-family: 'Satisfy', cursive; font-size: 3.33rem;">
+							night before
+						</h2>
+						<p class="subtitle is-5"><a href="http://www.theepicurean.com.au/" target="_blank"><u>The Epicurean</u></a> is a beautiful old packers shed that serves fresh Italian food using locally grown produce. We shall be making a reservation for dinner on the Friday night for 7pm. If you'd like to join us, please let us know <a href="mailto:hello@becandscotttietheknot.com?subject=Wedding RSVP"><u>when you RSVP</u></a>.</p>
+					</div>
+					<div class="column is-4">
+						<br>
+						<span class="icon heartbeat is-huge">
+							<svg class="fa icon-heart-o"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart-o"></use></svg>
+						</span>
+						<br><br>
+						<h2 class="subtitle is-3" style="font-family: 'Satisfy', cursive; font-size: 3.33rem;">
+							morning after
+						</h2>
+						<p class="subtitle is-5">Lindenderry shall be serving breakfast for all guests the morning after at 9am, but all are welcome to attend, whether you are hotel guests or not.</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
-
-	<section class="hero is-black is-bold is-fullheight" id="gallery">
+	<section class="hero is-fullheight" id="gallery" style="background: none;"></section>
+	<section class="hero is-black is-bold is-fullheight" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
 		<div class="slider-container">
-		  <div class="slider">
-		    <div class="slider__item"><div class="hero-body" style="height: 100vh; background: url(images/becnscott-cheekymonkey.jpg) no-repeat center center; background-size: cover;"></div></div>
-			<div class="slider__item"><div class="hero-body" style="height: 100vh; background: url(images/becnscott.jpg) no-repeat center center; background-size: cover;"></div></div>
-			<div class="slider__item"><div class="hero-body" style="height: 100vh; background: url(images/becnscott-quokka.jpg) no-repeat center left; background-size: cover;"></div></div>
-		  </div>
-		  <div class="slider__switch slider__switch--prev" data-ikslider-dir="prev">
-		    <span><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path d="M13.89 17.418c.27.272.27.71 0 .98s-.7.27-.968 0l-7.83-7.91c-.268-.27-.268-.706 0-.978l7.83-7.908c.268-.27.7-.27.97 0s.267.71 0 .98L6.75 10l7.14 7.418z"/></svg></span>
-		  </div>
-		  <div class="slider__switch slider__switch--next" data-ikslider-dir="next">
-		    <span><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path d="M13.25 10L6.11 2.58c-.27-.27-.27-.707 0-.98.267-.27.7-.27.968 0l7.83 7.91c.268.27.268.708 0 .978l-7.83 7.908c-.268.27-.7.27-.97 0s-.267-.707 0-.98L13.25 10z"/></svg></span>
-		  </div>
-	  </div>
+			<div class="slider">
+				<div class="slider__item" style="height: 100vh; background: url(images/becnscott-cheekymonkey.jpg) no-repeat center center; background-size: cover;"></div>
+				<div class="slider__item" style="height: 100vh; background: url(images/becnscott.jpg) no-repeat center center; background-size: cover;"></div>
+				<div class="slider__item" style="height: 100vh; background: url(images/becnscott-quokka.jpg) no-repeat center left; background-size: cover;"></div>
+			</div>
+			<div class="slider__switch slider__switch--prev" data-ikslider-dir="prev">
+				<span>
+					<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20">
+						<path d="M13.89 17.418c.27.272.27.71 0 .98s-.7.27-.968 0l-7.83-7.91c-.268-.27-.268-.706 0-.978l7.83-7.908c.268-.27.7-.27.97 0s.267.71 0 .98L6.75 10l7.14 7.418z"/>
+					</svg>
+				</span>
+			</div>
+			<div class="slider__switch slider__switch--next" data-ikslider-dir="next">
+				<span>
+					<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20">
+						<path d="M13.25 10L6.11 2.58c-.27-.27-.27-.707 0-.98.267-.27.7-.27.968 0l7.83 7.91c.268.27.268.708 0 .978l-7.83 7.908c-.268.27-.7.27-.97 0s-.267-.707 0-.98L13.25 10z"/>
+					</svg>
+				</span>
+			</div>
+		</div>
 	</section>
-
-	<section class="hero is-warning is-bold is-fullheight" id="accomodation">
-	  <div class="hero-body">
-	    <div class="container has-text-centered">
-	      <h1 class="title is-1" style="font-family: 'Satisfy', cursive; font-size: 5rem;">
-	        Accom<span class="is-hidden-mobile">odation</span>
-	      </h1>
-
-		  <br>
-		  <div class="columns">
-		    <div class="column is-8 is-offset-2">
-		  	  <p class="subtitle is-5">Red Hill is a beautiful wine region in the Mornington Peninsula, about an hour's drive south of Melbourne, close to the beaches of Dromana and Sorrento. Lindenderry has 15 discounted rooms set aside for our guests only, and a further 40 rooms available for anyone on a first come first served basis. Just call <a href="tel:+61(03) 5989 2933"><u>(03) 5989 2933</u></a> and tell them you are our guests, or <a href="mailto:hello@becandscotttietheknot.com?subject=Revervation help"><u>contact us</u></a> for help getting your booking confirmed. We'd love for you to spend the night (or two) and celebrate in style with us.</p>
-		    </div>
-		  </div>
-	    </div>
-	  </div>
+	<section class="hero is-warning is-bold is-fullheight" id="accomodation" style="position: relative;">
+		<div class="hero-body">
+			<div class="container has-text-centered" style="overflow: hidden;">
+				<h1 class="title truncate is-1" style="font-family: 'Satisfy', cursive; font-size: 5rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+					Accomodation
+				</h1>
+				<br>
+				<div class="columns">
+					<div class="column is-8 is-offset-2">
+						<p class="subtitle is-5">Red Hill is a beautiful wine region in the Mornington Peninsula, about an hour's drive south of Melbourne, close to the beaches of Dromana and Sorrento. Lindenderry has 15 discounted rooms set aside for our guests only, and a further 40 rooms available for anyone on a first come first served basis. Just call <a href="tel:+61(03) 5989 2933"><u>(03) 5989 2933</u></a> and tell them you are our guests, or <a href="mailto:hello@becandscotttietheknot.com?subject=Revervation help"><u>contact us</u></a> for help getting your booking confirmed. We'd love for you to spend the night (or two) and celebrate in style with us.</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
-
-	<section class="hero is-info is-bold is-fullheight" id="rsvp">
-	  <div class="hero-body">
-	    <div class="container has-text-centered">
-	      <h1 class="title is-1" style="font-family: 'Satisfy', cursive; font-size: 5rem;">
-	        RSVP
-	      </h1>
-
-		  <br>
-		  <div class="columns">
-		    <div class="column is-8 is-offset-2">
-		  	  <p class="subtitle is-5">Our time has finally come, let us know if you will be able to join our celebration!</p>
-
-			  <p><a href="mailto:hello@becandscotttietheknot.com?subject=Wedding RSVP" class="button heartbeathover is-large is-danger">Let us know</a></p>
-
-			  <br><br>
-			  <span class="icon" style="opacity: 0.2">
-  				<i class="fa fa-diamond"></i>
-  			  </span>
-		    </div>
-		  </div>
-	    </div>
-	  </div>
+	<section class="hero is-info is-bold is-fullheight" id="rsvp" style="position: relative;">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<h1 class="title is-1" style="font-family: 'Satisfy', cursive; font-size: 5rem;">
+					RSVP
+				</h1>
+				<br>
+				<div class="columns">
+					<div class="column is-8 is-offset-2">
+						<p class="subtitle is-5">Our time has finally come, let us know if you will be able to join our celebration!</p>
+						<p><a href="mailto:hello@becandscotttietheknot.com?subject=Wedding RSVP" class="button heartbeathover is-large is-danger">Let us know</a></p>
+						<br><br>
+						<span class="icon is-medium" style="opacity: 0.2">
+							<svg class="fa icon-diamond"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-diamond"></use></svg>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none;"><symbol id="icon-angle-down" viewBox="0 0 18 28"><path d="M16.797 11.5c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-7.281-7.281c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.219-0.156 0.359-0.156 0.125 0 0.266 0.063 0.359 0.156l6.141 6.141 6.141-6.141c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l0.781 0.781c0.094 0.094 0.156 0.234 0.156 0.359z"></path></symbol><symbol id="icon-clock-o" viewBox="0 0 24 28"><path d="M14 8.5v7c0 0.281-0.219 0.5-0.5 0.5h-5c-0.281 0-0.5-0.219-0.5-0.5v-1c0-0.281 0.219-0.5 0.5-0.5h3.5v-5.5c0-0.281 0.219-0.5 0.5-0.5h1c0.281 0 0.5 0.219 0.5 0.5zM20.5 14c0-4.688-3.813-8.5-8.5-8.5s-8.5 3.813-8.5 8.5 3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zM24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12 12 5.375 12 12z"></path></symbol><symbol id="icon-diamond" viewBox="0 0 32 28"><path d="M3.313 12l9.734 10.391-4.688-10.391h-5.047zM16 24.063l5.453-12.063h-10.906zM8.406 10l3.187-6h-4.094l-4.5 6h5.406zM18.953 22.391l9.734-10.391h-5.047zM10.672 10h10.656l-3.187-6h-4.281zM23.594 10h5.406l-4.5-6h-4.094zM25.797 2.406l6 8c0.297 0.375 0.266 0.922-0.063 1.281l-15 16c-0.187 0.203-0.453 0.313-0.734 0.313s-0.547-0.109-0.734-0.313l-15-16c-0.328-0.359-0.359-0.906-0.063-1.281l6-8c0.187-0.266 0.484-0.406 0.797-0.406h18c0.313 0 0.609 0.141 0.797 0.406z"></path></symbol><symbol id="icon-heart-o" viewBox="0 0 28 28"><path d="M26 9.312c0-4.391-2.969-5.313-5.469-5.313-2.328 0-4.953 2.516-5.766 3.484-0.375 0.453-1.156 0.453-1.531 0-0.812-0.969-3.437-3.484-5.766-3.484-2.5 0-5.469 0.922-5.469 5.313 0 2.859 2.891 5.516 2.922 5.547l9.078 8.75 9.063-8.734c0.047-0.047 2.938-2.703 2.938-5.563zM28 9.312c0 3.75-3.437 6.891-3.578 7.031l-9.734 9.375c-0.187 0.187-0.438 0.281-0.688 0.281s-0.5-0.094-0.688-0.281l-9.75-9.406c-0.125-0.109-3.563-3.25-3.563-7 0-4.578 2.797-7.313 7.469-7.313 2.734 0 5.297 2.156 6.531 3.375 1.234-1.219 3.797-3.375 6.531-3.375 4.672 0 7.469 2.734 7.469 7.313z"></path></symbol><symbol id="icon-map-marker" viewBox="0 0 16 28"><path d="M12 10c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zM16 10c0 0.953-0.109 1.937-0.516 2.797l-5.688 12.094c-0.328 0.688-1.047 1.109-1.797 1.109s-1.469-0.422-1.781-1.109l-5.703-12.094c-0.406-0.859-0.516-1.844-0.516-2.797 0-4.422 3.578-8 8-8s8 3.578 8 8z"></path></symbol><symbol id="icon-moon-o" viewBox="0 0 23 28"><path d="M19.719 20.359c-0.562 0.094-1.141 0.141-1.719 0.141-5.797 0-10.5-4.703-10.5-10.5 0-1.984 0.578-3.922 1.625-5.578-4.156 1.234-7.125 5.047-7.125 9.578 0 5.516 4.484 10 10 10 3.016 0 5.844-1.375 7.719-3.641zM22.891 19.031c-1.953 4.234-6.234 6.969-10.891 6.969-6.609 0-12-5.391-12-12 0-6.484 5.078-11.75 11.547-11.984 0.438-0.016 0.797 0.234 0.953 0.609 0.172 0.391 0.063 0.844-0.234 1.125-1.781 1.625-2.766 3.844-2.766 6.25 0 4.688 3.813 8.5 8.5 8.5 1.234 0 2.422-0.266 3.563-0.797 0.391-0.172 0.828-0.094 1.125 0.203s0.375 0.75 0.203 1.125z"></path></symbol></svg>
 </body>
 </html>
