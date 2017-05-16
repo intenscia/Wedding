@@ -226,9 +226,10 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
-	<section class="hero is-dark is-fullheight" style="position: relative; background-image: url(images/becnscott.jpg); background-repeat: no-repeat; background-position: top center; background-size: cover; background-attachment: fixed; z-index: 2;">
+	<section class="hero is-dark is-fullheight" style="position: relative; z-index: 2;">
 		<!-- Hero header: will stick at the top -->
-		<div class="hero-head" style="background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 98%); background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 75%,rgba(0,0,0,0) 98%); background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 75%,rgba(0,0,0,0) 98%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );">
+		<div style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index: 1; background-image: url(images/becnscott.jpg); background-repeat: no-repeat; background-position: top center; background-size: cover; background-attachment: fixed;"></div>
+		<div class="hero-head" style="position: relative; z-index: 2; background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 98%); background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 75%,rgba(0,0,0,0) 98%); background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 75%,rgba(0,0,0,0) 98%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );">
 			<header class="nav" style="box-shadow: none;">
 				<div class="container">
 					<div class="nav-left" style="overflow: hidden;">
@@ -265,7 +266,7 @@ $(document).ready(function() {
 			</header>
 		</div>
 		<!-- Hero content: will be in the middle -->
-		<div class="hero-body">
+		<div class="hero-body" style="position: relative; z-index: 2;">
 			<div class="container has-text-centered">
 				<h1 class="title is-1" style="font-family: 'Satisfy', cursive; font-size: 5rem;">
 					bec &amp; scott
@@ -276,7 +277,7 @@ $(document).ready(function() {
 			</div>
 		</div>
 		<!-- Hero footer: will stick at the bottom -->
-		<div class="hero-foot has-text-centered">
+		<div class="hero-foot has-text-centered" style="position: relative; z-index: 2;">
 			<a href="#details" class="icon is-epic animated bounce" style="margin-bottom: 1rem;">
 				<svg class="fa icon-angle-down"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-angle-down"></use></svg>
 			</a>
