@@ -152,6 +152,7 @@ $(document).ready(function() {
 
 	$("a[href*=\\#]").on("click", function(event){
 		event.preventDefault();
+		$(".nav-toggle,.nav-menu").removeClass("is-active");
 		$("html,body").animate({scrollTop:$(this.hash).offset().top}, 500);
 	});
 
